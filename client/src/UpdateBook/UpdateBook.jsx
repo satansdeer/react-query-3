@@ -11,8 +11,8 @@ export const UpdateBook = () => {
   const { data, error, isLoading, isError } = useQuery(["book", { id }], getBook);
   const { mutateAsync, isLoading: isMutating } = useMutation(updateBook)
 
-  const onFormSubmit = async (data) => {
-    await mutateAsync({...data, id})
+  const onFormSubmit = async (formData) => {
+    await mutateAsync({...formData, id})
     history.push("/")
   }
 
