@@ -5,6 +5,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components"
 import preset from '@rebass/preset'
@@ -17,6 +18,7 @@ ReactDOM.render(
       <ThemeProvider theme={preset}>
         <BrowserRouter>
           <App />
+          <ReactQueryDevtools  position="bottom-right" />
         </BrowserRouter>
       </ThemeProvider>
     </QueryClientProvider>
